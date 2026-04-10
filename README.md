@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍔 Rodrigues Sanduicheria - Cardápio Digital
 
-## Getting Started
+![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
-First, run the development server:
+Aplicação web desenvolvida para modernizar o atendimento de uma sanduicheria, oferecendo um **Cardápio Digital interativo** com sistema de carrinho de compras e personalização de pedidos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto foi inicialmente construído em React (SPA) e recentemente refatorado e migrado para **Next.js (App Router)**, garantindo maior performance, roteamento otimizado e uma estrutura escalável.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Funcionalidades
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Navegação Dinâmica:** Transição suave entre categorias (Combos, Sanduíches, Bebidas e Açaí) utilizando o App Router do Next.js.
+- **Modais de Personalização Inteligentes:**
+  - Escolha entre hambúrguer bovino ou frango.
+  - Adição de ingredientes extras com cálculo automático de preços.
+  - Modais dinâmicos adaptados para escolha de sabores (sucos/cremes) e montagem de Açaí (tamanhos e acompanhamentos).
+- **Carrinho de Compras (Context API):** Gerenciamento global de estado para adicionar itens, alterar quantidades, remover produtos e calcular o total da compra em tempo real.
+- **Checkout Simulado:** Formulário integrado para endereço de entrega e escolha da forma de pagamento (Cartão, PIX, Dinheiro).
+- **Sistema de Avaliações:** Área para clientes deixarem comentários e notas, com persistência temporária (LocalStorage).
+- **Design 100% Responsivo:** Layout adaptável para proporcionar a melhor experiência tanto em computadores quanto em dispositivos móveis (Smartphones/Tablets).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Tecnologias Utilizadas
 
-## Learn More
+Este projeto foi construído utilizando as seguintes tecnologias:
 
-To learn more about Next.js, take a look at the following resources:
+- **[Next.js](https://nextjs.org/)** - Framework React com App Router.
+- **[React.js](https://reactjs.org/)** - Biblioteca JavaScript para construção da interface de usuário.
+- **[Styled-Components](https://styled-components.com/)** - CSS-in-JS para estilização componentizada e isolada.
+- **Context API** - Para gerenciamento do estado global do Carrinho de Compras.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estrutura de Pastas (Destaques)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O projeto segue a arquitetura moderna do Next.js:
 
-## Deploy on Vercel
+- `/public`: Arquivos estáticos e imagens do projeto (logos, fotos dos sanduíches).
+- `/src/app`: Rotas da aplicação (`/combos`, `/sandwich`, `/drinks-acai`) e o Layout Global (`AppShell`).
+- `/src/components`: Componentes reutilizáveis (Header, Footer, Cart, MenuStyles, etc).
+- `/src/context`: Lógica de estado global (`UserContext`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Como rodar o projeto localmente
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Siga os passos abaixo para testar a aplicação na sua máquina:
+
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/SEU-USUARIO/rodrigues-sanduicheria-nextjs.git](https://github.com/SEU-USUARIO/rodrigues-sanduicheria-nextjs.git)
