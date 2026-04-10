@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: ${({ $isCartOpen }) => $isCartOpen ? '80%' : '100%'};  
+    margin-top: -30px;
+
     @media (max-width: 768px) {
         width: 100% !important; /* Em telas pequenas, ocupa sempre 100% */
     }

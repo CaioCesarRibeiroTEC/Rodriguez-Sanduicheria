@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 // --- Container Principal ---
 export const HeaderContainer = styled.header`
-    /* Estilos para Desktop > 560px */
     width: 97%;
     height: 5vh;
     background-color: rgba(77, 70, 70, 0.5);
@@ -14,6 +13,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 10px;
 
     /* Estilos para Mobile <= 560px */
     @media (max-width: 560px) {

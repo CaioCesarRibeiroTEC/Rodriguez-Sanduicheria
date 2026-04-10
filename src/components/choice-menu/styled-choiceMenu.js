@@ -5,7 +5,7 @@ export const ChoiceMenuContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 8px;
 
     @media (max-width: 560px) {
         position: static;
