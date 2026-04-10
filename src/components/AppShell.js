@@ -1,7 +1,5 @@
 "use client";
 
-import { useContext } from "react";
-import { UserContext } from "../context/userContext";
 import { HeaderComponets } from "./header/header";
 import { ChoiceMenuComponets } from "./choice-menu/choiceMenu";
 import { FooterComponets } from "./footer/footer";
@@ -30,7 +28,7 @@ const MainContent = styled.main`
 `;
 
 export function AppShell({ children }) {
-    const { isCartOpen } = useContext(UserContext);
+  
 
     return (
         <HomeContainer>
