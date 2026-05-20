@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext, useState } from 'react';
+import { toast } from 'react-toastify';
 import { UserContext } from '../../context/userContext';
 import { 
     CartContainer, CartItem, CloseButton, CartActionsContainer, 
@@ -18,9 +19,11 @@ export function Cart() {
     const [isCheckingOut, setIsCheckingOut] = useState(false);
 
     const handleConfirmOrder = () => {
-        alert('Pedido confirmado! (Esta é uma simulação)');
-        clearCart();
-        setIsCheckingOut(false);
+        const handleConfirmOrder = () => {
+            toast.success('Pedido confirmado! (Esta é uma simulação)');
+            clearCart();
+            setIsCheckingOut(false);
+        }
     }
 
     return (

@@ -4,6 +4,7 @@
 import { useState, useContext } from 'react';
 import { UserContext } from '../../context/userContext';
 import { drinksCategories } from './data-drinks'; 
+import { toast } from 'react-toastify';
 import { 
     Container, Title, MenuGrid, MenuItem, MenuItemContent, MenuSpan, MenuP,
     ModalOverlay, ModalContainer, ModalImage, ModalInfo, AddsGrid, AddButton, DrinksMenuContainer
@@ -54,13 +55,13 @@ export default function DrinksAcaiPage() {
 
         // Lógica para Sucos e Cremes
         if (category.id === 'sucos' || category.id === 'cremes') {
-            if (!selectedFlavor) return alert("Por favor, escolha um sabor!");
+            if (!selectedFlavor) return toast.warning("Por favor, escolha um sabor!");
             cartItem.name = `${category.name} (${selectedFlavor})`;
             cartItem.finalPrice = category.price;
         } 
         // Lógica para Outras Bebidas (Refrigerantes/Água)
         else if (category.id === 'outras') {
-            if (!selectedOther) return alert("Por favor, escolha uma bebida!");
+            if (!selectedOther) return toast.warning("Por favor, escolha uma bebida!");
             cartItem.name = selectedOther.name;
             cartItem.finalPrice = selectedOther.price;
         } 
@@ -72,6 +73,7 @@ export default function DrinksAcaiPage() {
             cartItem.finalPrice = selectedSize.price + extraPrice;
         }
 
+        toast.success(`${cartItem.name} foi adicionado ao carrinho!`);
         addToCart(cartItem);
         setIsModalOpen(false);
     };

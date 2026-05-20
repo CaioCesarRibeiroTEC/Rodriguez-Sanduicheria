@@ -1,6 +1,7 @@
 "use client"; // <-- ESSA LINHA É A GRANDE MÁGICA NO NEXT.JS!
 
 import { createContext, useState, useEffect } from "react";
+import { toast } from 'react-toastify';
 
 // --- Hook para detectar o tamanho da janela ---
 function useWindowSize() {
@@ -50,7 +51,7 @@ export const UserStore = ({children}) => {
 
     const addToCart = (item) => {
         setCart(prevCart => [...prevCart, item]);
-        alert(`${item.name} foi adicionado ao carrinho!`);
+        toast.success(`${item.name} foi adicionado ao carrinho!`);
         setIsCartOpen(true);
     };
 
